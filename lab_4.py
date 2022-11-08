@@ -14,6 +14,7 @@ from customers left join orders using(cust_id) left join orderitems using (order
 group by cust_id;
 '''
 
+#create cinnect object
 conn = psycopg2.connect(user=username, password=password, dbname=database, host=host, port=port)
 print(type(conn))
 
